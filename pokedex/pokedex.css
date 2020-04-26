@@ -1,6 +1,17 @@
+:root {
+    --main-body: #FF3B07;
+    --main-body-shadow: #DD2E07;
+    --green: #709924;
+    --screen: #BADEF9;
+    --dark-grey:#263139;
+    --screen-border: #95A3A9;
+    --medium-grey:#4E656F;
+    --off-white:#D5D7D9;
+  }
+
 h1{
     margin: 4% 0%;
-    color:white;
+    color:#333;
     font-family:'Press Start 2P', sans-serif;
     text-align: center;
 }
@@ -10,7 +21,7 @@ p{
 }
 
 body{
-    background-color: #333;
+    background-color:#f8f8ff;
 }
 
 .pokedex-box{
@@ -18,7 +29,6 @@ body{
     margin:auto;
     margin-top:2%;
 
-    /* border: solid red 3px; */
     width:650px;
     height: 500px;
 }
@@ -30,7 +40,7 @@ body{
 
     width:55%;
     height:95%;
-    background-color: #FF3B07;
+    background-color: var(--main-body);
     border-radius:10%;
     z-index: 2;
 }
@@ -41,7 +51,7 @@ body{
 
     width:100%;
     height:6%;
-    background-color: #333;
+    background-color: #f8f8ff;
     z-index: 2;
 }
 
@@ -52,98 +62,112 @@ body{
 
     width:85%;
     height:6%;
-    background-color: #DD2E07;
+    background-color: var(--main-body-shadow);
     z-index: 3;
 }
 
-.top-darkgrey-box{
-    position:absolute;
-    top:7.5%;
-    left: -15%;
-    
-    background-color: #263139;
-    border-radius:10%;
-    width:60%;
-    height:85%;
-    z-index: 1;
+.screen-border-top,
+.screen-border-bottom{
+    border-radius: 7%;
+    background-color: var(--screen-border);
+    width:65%;
+    height:38%;
 }
 
-.info-box-border-top{
+.screen-border-top{
     position:absolute;
-    left:23%;
+    left:17.5%;
     top:4%;
-
-    border-radius: 7%;
-    background-color: #95A3A9;
-    width:65%;
-    height:38%;
 }
 
-.bottom-darkgrey-box{
+.screen-border-bottom{
     position:absolute;
-    top: 6.1%;
-    left: -36%;
-    
-    background-color: #263139;
-    width:60%;
-    height:85%;
-    z-index: 1;
+    left:17.5%;
+    top:58%;
 }
 
-.info-box-border-bottom{
-    position:absolute;
-    left:23%;
-    bottom:4%;
-
-    border-radius: 7%;
-    background-color: #95A3A9;
-    width:65%;
-    height:38%;
-}
-
-.info-box-border-double{
+.screen-border-double{
     position:absolute;
     border-radius: 7%;
-    background-color: #95A3A9;
+    background-color: var(--screen-border);
     width:100%;
     height:100%;
-    z-index:2;
+    z-index:3;
 }
 
-.info-box{
+.screen{
     position:absolute;
     left:10%;
     top:12.5%;
 
-    background-color: #BADEF9;
+    background-color: var(--screen);
     width:80%;
     height:75%;
     z-index:3;
 }
 
-.left-gray-circle{
+.darkgrey-circle{
+    position:relative;
+    top: 6.2%;
+    left: -60%;
+    
+    background-color: #263139;
+    border-radius: 50%;
+    width:70%;
+    height:85.5%;
+    z-index: 2;
+}
+
+.darkgrey-box{
+    position:absolute;
+    top: 6.1%;
+    left: -25%;
+    
+    background-color: var(--dark-grey);;
+    border-radius: 0% 4% 4% 0%;
+    width:140%;
+    height:85.5%;
+    z-index: 2;
+}
+
+.audio-hole{
+    position: absolute;
+    left: 92.5%;
+    top: 50%;
+    width:4%;
+    height:8%;
+    border-radius: 50%;
+    background-color: #0b0e11;
+}
+
+.select-button-top,
+.select-button-bottom{
+    position: absolute;
+    left: 92.5%;
+    width:4%;
+    height:8%;
+    border-radius: 50%;
+    background-color: var(--off-white);
+}
+
+.select-button-top{
+    bottom: 25%;
+}
+.select-button-bottom{
+    bottom:10%
+}
+
+.left-grey-circle{
     position:absolute;
     top: 53%;
     left: -32%;
     overflow:hidden;
     
-    background-color: #4E656F;
+    background-color: var(--medium-grey);
     border-radius: 50%;
     width:64%;
     height:47%;
     z-index: 1;
-}
-
-.left-darkgrey-circle{
-    position:absolute;
-    top: 15.5%;
-    left: 15%;
-    
-    background-color: #263139;
-    border-radius: 50%;
-    width:75%;
-    height:69%;
-    z-index: 2;
 }
 
 .left-green-circle{
@@ -151,38 +175,56 @@ body{
     top: 42.5%;
     left: -4%;
     
-    background-color: #7FAE29;
+    background-color: var(--green);
     border-radius: 50%;
     width:13.5%;
     height:13.5%;
     z-index: 1;
 }
 
-.left-red-vertical-bar{
+.bottom-left-corner-squared{
     position:absolute;
     top: 50%;
     
-    background-color: #FF3B07;
-    width:30%;
+    background-color: var(--main-body);
+    border-radius: 0% 0% 10% 0%;
+    width:100%;
     height:50%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .d-pad {
     position: absolute;
-    top: 65%;
-    left: -13.5%;
-    /* border:solid white 2px; */
+    top: 23%;
+    left: -46%;
     
-    height:22%;
-    width:29%;
+    height: 50%;
+    width: 39%;
     z-index: 4;
 }
+
+.d-pad-protector {
+    position: absolute;
+    top: 28%;
+    left: -42%;
+    
+    height: 50%;
+    width: 39%;
+    z-index: 4;
+}
+
+.button-zone-circle{
+    height:11.1%; 
+    width:11.1%;
+    background-color: #0b0e11;
+    border-radius: 50%;
+}
+
 
 .button{
     height:33.3%; 
     width:33.3%;
-    background-color: #D5D7D9;
+    background-color: var(--off-white);
 }
 
 .b-up{
@@ -216,58 +258,82 @@ body{
 .right-control-pad{
     position:absolute;
     top: 55.5%;
-    left: 74%;
+    left: 100%;
 
-    width:25%;
+    width:45%;
     height:38%;
-    /* border: green solid 1px; */
     z-index:1;
 }
 
-.cp-gray-circle{
+.joystick-background-circle{
     position:absolute;
 
     width:100%;
     height:100%;
-    background-color: #2F434C;
+    background-color: var(--dark-grey);
     border-radius: 50%;
     z-index: 1;
 }
 
-.cp-gray-square{
+.joystick-background-square{
     position:absolute;
     left:-5%;
 
-    width:60%;
+    width:55%;
     height:100%;
-    background-color: #2F434C;
+    background-color: var(--dark-grey);
     z-index: 1;
 }
 
 .joystick{
     position:absolute;
-    left:8%;
-    top:16%;
+    left:5%;
+    top:12.5%;
     padding: 0% 5%;
 
-    width:65%;
-    height:65%;
-    background-color: #4E656F;
+    width:75%;
+    height:75%;
+    background-color: var(--medium-grey);
     border-radius: 50%;
     z-index:2;
 }
 
 .joystick-center{
-    position:relative ;
-    left:21%;
+    position:absolute ;
+    left:25%;
     top:25%;
 
-    width:58%;
+    width:50%;
     height:50%;
-    background-color: #7FAE29;
+    background-color: var(--green);
     border-radius: 50%;
     z-index:3;
 }
+
+.joystick-ring{
+    position: absolute;
+    left:13%;
+    top: 13%;
+
+    width:70%;
+    height:70%;
+    border:solid 3px var(--dark-grey);
+    border-radius: 150%;
+    z-index:3
+}
+
+.joystick-ring-button{
+    position: absolute;
+    left:60%;
+    top: 12%;
+
+    width:20%;
+    height:20%;
+    background-color: var(--dark-grey);
+    border-radius: 150%;
+    z-index:3
+}
+
 
 
 
